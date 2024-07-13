@@ -1,9 +1,13 @@
 const express = require('express');
 const helmet = require('helmet');
 const app = express();
+app.use(helmet.hidePoweredBy());
 
-const PORT = process.env.PORT || 3030;
+// const PORT = process.env.PORT || 3030;
 
+
+
+helmet.hidePoweredBy()
 
 module.exports = app;
 const api = require('./server.js');
