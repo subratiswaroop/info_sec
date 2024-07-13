@@ -4,13 +4,13 @@ const app = express();
 app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({action: 'DENY'}));
 app.use(helmet.xssFilter({}));
-app.use(helmet.noSniff())
+app.use(helmet.noSniff());
 
 // const PORT = process.env.PORT || 3030;
-app.use(express.urlencoded({extended: true }))
-app.get('/test', (req, res) => {
-  res.send('<script>alert("XSS");</script>');
-});
+// app.use(express.urlencoded({extended: true }))
+// app.get('/test', (req, res) => {
+//   res.send('<script>alert("XSS");</script>');
+// });
 
 
 helmet.hidePoweredBy()
