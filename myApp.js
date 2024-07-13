@@ -6,7 +6,7 @@ app.use(helmet.frameguard({action: 'DENY'}));
 app.use(helmet.xssFilter({}));
 app.use(helmet.noSniff());
 app.use(helmet.ieNoOpen());
-const timeInSeconds = 
+const timeInSeconds = 90 * 24 * 60 * 60;
 app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
 
 // const PORT = process.env.PORT || 3030;
