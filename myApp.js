@@ -2,6 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const app = express();
 app.use(helmet.hidePoweredBy());
+app.use(helmet,helmet.frameguard({action: 'deny'}));
 
 // const PORT = process.env.PORT || 3030;
 
